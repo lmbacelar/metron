@@ -46,3 +46,10 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+
+
+// Custom classes
+.summary {
+  @include panel();
+}
+

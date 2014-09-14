@@ -1,0 +1,11 @@
+- present instrument do |inst|
+  .summary
+    .reference
+      h3= inst.reference
+    .details
+      h4= inst.description
+      p= inst.details
+    .actions
+      = inst.edit_link
+      span | 
+      = inst.destroy_link

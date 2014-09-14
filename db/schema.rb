@@ -11,17 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140913160417) do
+ActiveRecord::Schema.define(version: 20140913184956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "instruments", force: true do |t|
-    t.string   "description"
+    t.string   "reference",    null: false
+    t.string   "description",  null: false
     t.string   "manufacturer"
     t.string   "model"
+    t.string   "sn"
+    t.string   "pn"
+    t.string   "remarks"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "instruments", ["reference"], name: "index_instruments_on_reference", unique: true, using: :btree
 
 end
