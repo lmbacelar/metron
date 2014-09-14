@@ -3,7 +3,8 @@ class InstrumentPresenter < BasePresenter
   delegate :description, :manufacturer, to: :instrument
 
   def details
-    text  = "<strong>man.</strong> #{instrument.manufacturer}  " if instrument.manufacturer
+    text  = ''
+    text += "<strong>man.</strong> #{instrument.manufacturer}  " if instrument.manufacturer
     text += "<strong>mod.</strong> #{instrument.model}  "        if instrument.model
     text += "<strong>s/n</strong> #{instrument.sn}  "            if instrument.sn
     text += "<strong>p/n</strong> #{instrument.pn}  "            if instrument.pn

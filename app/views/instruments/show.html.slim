@@ -1,0 +1,21 @@
+h1= @instrument.reference
+section
+  dl
+    dt Description
+    dd= @instrument.description
+section
+  dl
+    dt Manufacturer
+    dd= @instrument.manufacturer
+    dt Model
+    dd= @instrument.model
+    dt Serial Number
+    dd= @instrument.sn
+    dt Part Number
+    dd= @instrument.pn
+section
+  dl
+    dt Remarks
+    dd= @instrument.remarks
+
+= link_to 'Back to Instrument list', instruments_path

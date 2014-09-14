@@ -1,11 +1,11 @@
-- present instrument do |inst|
+- present instrument do |i|
   .summary
     .reference
-      h3= inst.reference
+      h3= i.reference
     .details
-      h4= inst.description
-      p= inst.details
+      h4= i.description
+      p= i.details
     .actions
-      = inst.edit_link
+      = i.edit_link
       span | 
-      = inst.destroy_link
+      = i.destroy_link
