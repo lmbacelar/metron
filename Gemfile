@@ -32,7 +32,7 @@ end
 
 group :development, :test do
   gem 'spring'
-  gem 'debugger'
+  gem 'byebug'
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
   gem 'rspec-rails'
