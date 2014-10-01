@@ -56,6 +56,18 @@ Feature: Instrument Management
     And   I should see /Description\s*can't be blank/
     And   I should not see "Instrument was successfully created"
 
+  Scenario: Edit existing Instrument
+    Given the following "Instruments" exist:
+      | reference | description | manufacturer | model | pn | sn | remarks |
+      | MUL001    | Multimeter  | Fluke        | 8842A |    | 01 | app:x   |
+    When I visit the "Instruments" page
+    And  I follow "Edit"
+    And  I fill in "Description" with "Digital Multimeter"
+    And  I press "Update"
+    Then I should see "Instrument was successfully updated"
+    And I should see "Digital Multimeter"
+    And I should have 1 "Instrument"
+
   Scenario: Delete ITS-90 Function
     Given the following "Instruments" exist:
       | reference | description | manufacturer | model | pn | sn | remarks |

@@ -31,6 +31,9 @@ When /^(?:|I )press "([^"]*)"$/ do |button|
 end
 
 
+Then /^I should have (\d+) "(.*)"$/ do |count, model|
+  expect(model.singularize.capitalize.constantize.count).to eq count.to_i
+end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   expect(page).to have_content(text)

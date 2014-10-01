@@ -10,14 +10,25 @@ class InstrumentsController < ApplicationController
     @instrument ||= Instrument.new
   end
 
+  def show
+    @instrument = Instrument.find(params[:id])
+    respond_with @instrument
+  end
+
   def create
     @instrument = Instrument.new instrument_params
     flash[:notice] = 'Instrument was successfully created' if @instrument.save_and_retry_on_unique
     respond_with @instrument
   end
 
-  def show
+  def edit
     @instrument = Instrument.find(params[:id])
+    respond_with @instrument
+  end
+
+  def update
+    @instrument = Instrument.find(params[:id])
+    flash[:notice] = 'Instrument was successfully updated' if @instrument.update_attributes(instrument_params)
     respond_with @instrument
   end
 
