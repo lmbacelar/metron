@@ -7,11 +7,15 @@ class ApplicationController < ActionController::Base
 
 private
   def current_tenant
-      @current_tenant ||= Tenant.find_by_subdomain! request.subdomain
+      @current_tenant ||= Tenant.find_by_subdomain request.subdomain
   end
   helper_method :current_tenant
 
   def scope_current_tenant &block
+    if current_tenant
       current_tenant.scope_schema 'public', &block
+    else
+      yield
+    end
   end
 end
