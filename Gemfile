@@ -31,6 +31,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'thin'
   gem 'spring'
   gem 'byebug'
   gem 'spring-commands-rspec'
@@ -39,9 +40,6 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'guard-cucumber'
   gem 'rails_layout'
-
-
-
   # gem 'capybara'
   # gem 'simplecov', require: false
 end
