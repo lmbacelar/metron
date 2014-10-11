@@ -1,4 +1,4 @@
-class Tenant < ActiveRecord::Base
+class Account < ActiveRecord::Base
 
   # validate name subdomain presence uniquenes
   # validate subdomain RegExp /^[a-z\d]+([-_][a-z\d]+)*$/i
