@@ -6,6 +6,7 @@
     section.form-inputs
       = f.input :email
       = f.input :password
+      = f.input :remember, as: :boolean, label: 'Keep me logged in'
 
     section.form-actions
       = f.button :submit, 'Log In', data: { disable_with: 'Logging in...' }
