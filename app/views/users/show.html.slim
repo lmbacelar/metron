@@ -1,0 +1,9 @@
+h1= @user.name
+section
+  dl
+    dt e-mail
+    dd= @user.email
+
+section.secondary_actions
+  = link_to 'Edit', edit_user_path(@user)
+  = link_to 'Home', root_url, class: 'secondary'

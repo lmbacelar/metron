@@ -1,6 +1,7 @@
 h1 Instruments
 
-= link_to 'New Instrument', new_instrument_path, class: 'button radius'
+.main_actions
+  = link_to 'New Instrument', new_instrument_path
 
 - if @instruments.empty?
   p No instruments found.

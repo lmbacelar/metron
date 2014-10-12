@@ -18,4 +18,6 @@ section
     dt Remarks
     dd= @instrument.remarks
 
-= link_to 'Back to Instrument list', instruments_path
+section.secondary_actions
+  = link_to 'Edit', edit_instrument_path(@instrument)
+  = link_to 'Back to Instrument list', instruments_path, class: 'secondary'

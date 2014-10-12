@@ -53,3 +53,25 @@ section {
   @include panel();
 }
 
+@mixin main_button {
+  @extend .button;
+  @extend .radius;
+}
+@mixin secondary_button {
+  @extend .button;
+  @extend .tiny;
+  @extend .radius;
+}
+
+.main_actions {
+  a {
+    @include main_button;
+  }
+}
+
+.secondary_actions {
+  a {
+    @include secondary_button;
+    margin-right: 0.75em;
+  }
+}

@@ -1,0 +1,11 @@
+= simple_form_for :login, { url: user_sessions_path } do |f|
+  fieldset 
+    = f.error_notification
+    = f.error :base
+
+    section.form-inputs
+      = f.input :email
+      = f.input :password
+
+    section.form-actions
+      = f.button :submit, 'Log In', data: { disable_with: 'Logging in...' }

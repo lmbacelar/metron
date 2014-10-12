@@ -1,0 +1,10 @@
+- present user do |u|
+  .summary
+    .reference
+      h3= u.name
+    .details
+      h4= u.email
+      p= u.details
+    .secondary_actions
+      = u.edit_link
+      = u.destroy_link

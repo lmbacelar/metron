@@ -1,0 +1,9 @@
+h1 Users
+
+.main_actions
+  = link_to 'New User', new_user_path
+
+- if @users.empty?
+  p No users found.
+- else
+  = render @users

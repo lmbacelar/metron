@@ -16,10 +16,10 @@ class InstrumentPresenter < BasePresenter
   end
 
   def edit_link
-    h.link_to 'Edit', h.edit_instrument_path(instrument)
+    h.link_to 'Edit', h.edit_instrument_path(instrument), class: 'secondary'
   end
 
   def destroy_link
-    h.link_to 'Destroy', instrument, method: :delete, data: { confirm: 'Are you sure?' }
+    h.link_to 'Destroy', instrument, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert'
   end
 end

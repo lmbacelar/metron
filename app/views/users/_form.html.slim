@@ -1,0 +1,13 @@
+= simple_form_for(@user) do |f|
+  fieldset 
+    = f.error_notification
+    = f.error :base
+
+    section.form-inputs
+      = f.input :name
+      = f.input :email
+      = f.input :password
+      = f.input :password_confirmation
+
+    section.form-actions
+      = f.button :submit, data: { disable_with: 'Submitting...' }

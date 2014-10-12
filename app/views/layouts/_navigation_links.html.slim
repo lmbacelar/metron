@@ -1,0 +1,11 @@
+ul.right
+  - if current_user
+    li.has-dropdown
+      = link_to current_user.name, '#'
+      ul.dropdown
+        li= link_to 'Edit Profile', edit_user_path(current_user.id)
+        li.divider
+        li= link_to 'Logout', :logout, method: :post
+  - else
+    li= link_to 'Login', :login
+    li= link_to 'Register', new_user_path
